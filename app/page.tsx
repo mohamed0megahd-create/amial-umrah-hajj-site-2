@@ -3,9 +3,9 @@ import PackageCard from '@/components/PackageCard'
 import { readPackages } from '@/lib/data'
 
 export default function Home() {
-  const db = readPackages()
-  const umrah = db.umrah.slice(0,2)
-  const hajj = db.hajj.slice(0,1)
+  // هات أول عروض من كل نوع بالطريقة الصحيحة
+  const umrah = readPackages('umrah').slice(0, 2)
+  const hajj  = readPackages('hajj').slice(0, 1)
 
   return (
     <div className="section space-y-10">
@@ -25,14 +25,14 @@ export default function Home() {
       <section>
         <h2 className="text-2xl font-bold mb-4">عروض مختارة — عمرة</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {umrah.map((p:any)=> <PackageCard key={p.slug} pkg={p} type="umrah" />)}
+          {umrah.map((p: any) => <PackageCard key={p.slug} pkg={p} type="umrah" />)}
         </div>
       </section>
 
       <section>
         <h2 className="text-2xl font-bold mb-4">عرض مميز — الحج</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {hajj.map((p:any)=> <PackageCard key={p.slug} pkg={p} type="hajj" />)}
+          {hajj.map((p: any) => <PackageCard key={p.slug} pkg={p} type="hajj" />)}
         </div>
       </section>
     </div>
