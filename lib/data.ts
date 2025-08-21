@@ -20,7 +20,6 @@ function readJSON<T = any>(p: string): T {
 }
 
 export function readAllPackages(): Pkg[] {
-  // تأكد إن عندك data/packages.json في الريبو
   return readJSON<Pkg[]>('data/packages.json')
 }
 
