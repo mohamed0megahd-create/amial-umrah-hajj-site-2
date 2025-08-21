@@ -1,21 +1,33 @@
 import fs from 'fs'
 import path from 'path'
 
-const dataDir = path.join(process.cwd(), 'data')
+export type Departure = { date: string; price: number }
+export type Addon = { code: string; name: string; price: number }
+export type Pkg = {
+  type: 'umrah' | 'hajj'
+  slug: string
+  name: string
+  description?: string
+  departures: Departure[]
+  addons?: Addon[]
+  images?: string[]
+}
 
-export function readPackages() {
-  const raw = fs.readFileSync(path.join(dataDir, 'packages.json'), 'utf-8')
-  return JSON.parse(raw)
-}
-export function readPackageBySlug(type: 'umrah'|'hajj', slug: string) {
-  const db = readPackages()
-  const list = db[type] || []
-  return list.find((x:any)=>x.slug===slug) || null
-}
-export function appendBooking(b: any) {
-  const file = path.join(dataDir, 'bookings.json')
+function readJSON<T = any>(p: string): T {
+  const file = path.join(process.cwd(), p)
   const raw = fs.readFileSync(file, 'utf-8')
-  const arr = JSON.parse(raw)
-  arr.push(b)
-  fs.writeFileSync(file, JSON.stringify(arr, null, 2), 'utf-8')
+  return JSON.parse(raw) as T
+}
+
+export function readAllPackages(): Pkg[] {
+  // تأكد إن عندك data/packages.json في الريبو
+  return readJSON<Pkg[]>('data/packages.json')
+}
+
+export function readPackages(type: 'umrah' | 'hajj'): Pkg[] {
+  return readAllPackages().filter(p => p.type === type)
+}
+
+export function readPackageBySlug(type: 'umrah' | 'hajj', slug: string): Pkg | undefined {
+  return readPackages(type).find(p => p.slug === slug)
 }
