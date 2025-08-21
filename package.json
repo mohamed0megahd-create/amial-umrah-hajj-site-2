@@ -1,0 +1,28 @@
+{
+  "name": "amial-umrah-hajj",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "postinstall": "tailwindcss -i ./app/globals.css -o ./app/out.css"
+  },
+  "dependencies": {
+    "next": "14.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "zod": "3.23.8",
+    "date-fns": "3.6.0",
+    "lucide-react": "0.408.0",
+    "stripe": "16.5.0"
+  },
+  "devDependencies": {
+    "typescript": "5.4.5",
+    "@types/react": "18.2.66",
+    "@types/node": "20.11.30",
+    "tailwindcss": "3.4.7",
+    "postcss": "8.4.38",
+    "autoprefixer": "10.4.19"
+  }
+}
