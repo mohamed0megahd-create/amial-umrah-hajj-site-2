@@ -1,175 +1,24 @@
-{
-  "umrah": [
-    {
-      "slug": "umrah-ramadan-premium",
-      "name": "باقة عمرة رمضان بريميوم",
-      "city": "مكة والمدينة",
-      "level": "5 نجوم",
-      "nights": 10,
-      "includes": [
-        "إقامة بفنادق 5 نجوم",
-        "نقل VIP",
-        "مرشد ديني",
-        "تأشيرة"
-      ],
-      "excludes": [
-        "الوجبات الإضافية",
-        "المصاريف الشخصية"
-      ],
-      "hotels": [
-        "فندق ساعة مكة فيرمونت",
-        "الأنصار الذهبي"
-      ],
-      "images": [
-        "/images/umrah1.jpg"
-      ],
-      "summary": "برنامج مريح بين مكة والمدينة بخدمات فاخرة.",
-      "addons": [
-        {
-          "code": "visa",
-          "name": "خدمة التأشيرة",
-          "price": 120
-        },
-        {
-          "code": "private-transfer",
-          "name": "نقل خاص",
-          "price": 80
-        }
-      ],
-      "departures": [
-        {
-          "date": "2025-02-25",
-          "price": 1200,
-          "seats": 25
-        },
-        {
-          "date": "2025-03-05",
-          "price": 1320,
-          "seats": 20
-        },
-        {
-          "date": "2025-03-15",
-          "price": 1380,
-          "seats": 12
-        }
-      ],
-      "itinerary": [
-        {
-          "day": 1,
-          "title": "الوصول إلى جدة",
-          "desc": "الاستقبال والنقل إلى مكة."
-        },
-        {
-          "day": 2,
-          "title": "أداء العمرة",
-          "desc": "أداء المناسك مع مرشد."
-        },
-        {
-          "day": 3,
-          "title": "راحة وزيارات",
-          "desc": "حر."
-        }
-      ]
-    },
-    {
-      "slug": "umrah-economy-spring",
-      "name": "باقة عمرة اقتصادية - الربيع",
-      "city": "مكة فقط",
-      "level": "3 نجوم",
-      "nights": 7,
-      "includes": [
-        "إقامة 3 نجوم",
-        "نقل جماعي",
-        "مرشد"
-      ],
-      "excludes": [
-        "التأشيرة",
-        "الوجبات"
-      ],
-      "hotels": [
-        "فندق راما"
-      ],
-      "images": [
-        "/images/umrah2.jpg"
-      ],
-      "summary": "خيار اقتصادي مناسب للعائلات.",
-      "addons": [
-        {
-          "code": "visa",
-          "name": "خدمة التأشيرة",
-          "price": 100
-        }
-      ],
-      "departures": [
-        {
-          "date": "2025-10-10",
-          "price": 680,
-          "seats": 40
-        },
-        {
-          "date": "2025-10-20",
-          "price": 700,
-          "seats": 40
-        }
-      ],
-      "itinerary": [
-        {
-          "day": 1,
-          "title": "الوصول",
-          "desc": "تسجيل الوصول بالفندق."
-        },
-        {
-          "day": 2,
-          "title": "أداء العمرة",
-          "desc": "مناسك مع المرشد."
-        }
-      ]
-    }
-  ],
-  "hajj": [
-    {
-      "slug": "hajj-1446-standard",
-      "name": "باقة حج 1446هـ - ستاندرد",
-      "city": "مكة والمدينة + المشاعر",
-      "level": "خيم مطوّرة",
-      "nights": 14,
-      "includes": [
-        "مخيمات مطورة بمنى وعرفات",
-        "نقل بين المشاعر",
-        "مرشدون",
-        "إصدار تصريح"
-      ],
-      "excludes": [
-        "النثريات الشخصية"
-      ],
-      "hotels": [
-        "فندق قباء"
-      ],
-      "images": [
-        "/images/hajj1.jpg"
-      ],
-      "summary": "تجربة متوازنة بين الراحة والتكلفة.",
-      "addons": [
-        {
-          "code": "upgrade-tent",
-          "name": "ترقية خيمة منى",
-          "price": 250
-        }
-      ],
-      "departures": [
-        {
-          "date": "2026-05-30",
-          "price": 3400,
-          "seats": 80
-        }
-      ],
-      "itinerary": [
-        {
-          "day": 1,
-          "title": "وصول المدينة",
-          "desc": "زيارة مسجد النبي."
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "type": "umrah",
+    "slug": "umrah-basic",
+    "name": "عمرة اقتصادية",
+    "description": "4 ليالي | فندق 3 نجوم",
+    "departures": [
+      { "date": "2025-09-10", "price": 350 },
+      { "date": "2025-10-05", "price": 370 }
+    ],
+    "addons": [
+      { "code": "visa", "name": "تأشيرة", "price": 120 },
+      { "code": "transfer", "name": "نقل خاص", "price": 60 }
+    ]
+  },
+  {
+    "type": "hajj",
+    "slug": "hajj-standard",
+    "name": "حج ستاندرد",
+    "description": "برنامج 14 يوم",
+    "departures": [{ "date": "2025-06-01", "price": 2400 }],
+    "addons": [{ "code": "vip-tent", "name": "خيمة VIP", "price": 300 }]
+  }
+]
